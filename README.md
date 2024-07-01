@@ -20,7 +20,6 @@ You can press **F3** to pause it.
 
 Using AutoHotkey, it simply sends inputs to your FFXIV window every so often in a random interval between 5 and 25 minutes. It is configured to send a random input between the following:
 
-* Left Control
 * Space
 * X
 * 1
