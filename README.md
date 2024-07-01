@@ -1,9 +1,5 @@
 # FFXIV Anti AFK Kick AHK Script
 
-## [Download](https://github.com/serenadeg/AAKXIV/releases/latest)
-
-Download the `aakxiv.ahk` file. That's all you need.
-
 ## Description
 
 A simple AHK script designed to prevent you from getting kicked from FFXIV for being AFK.
@@ -13,6 +9,10 @@ Use at your own risk. ;)
 ## Requirements
 
 * [AutoHotkey V2](https://www.autohotkey.com/)
+
+## [Download](https://github.com/serenadeg/AAKXIV/releases/latest)
+
+Download the `aakxiv.ahk` file. That's all you need.
 
 ## How to use
 
