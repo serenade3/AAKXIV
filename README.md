@@ -12,9 +12,9 @@ Use at your own risk. ;)
 
 ## How to use
 
-Download the latest version of this and open the `aakxiv.ahk` file. While it is running, press CTLR+S to activate it.
+Download the latest version of this and open the `aakxiv.ahk` file. While it is running, press **F2** to activate it.
 
-You can press WIN+CTLR+P to pause it.
+You can press **F3** to pause it.
 
 ## How it works
 
@@ -24,6 +24,10 @@ Using AutoHotkey, it simply sends inputs to your FFXIV window every so often in 
 * Space
 * X
 * 1
+
+## Log file
+
+When using the script it will generate a `aakxiv.log` file in the same directory as the script itself. This log file will show you exactly what buttons were pressed and when.
 
 ## Modifying the script
 
