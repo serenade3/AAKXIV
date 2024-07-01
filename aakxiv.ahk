@@ -20,8 +20,11 @@ MODIFYING BUTTON PRESSED: Modify the values in the "keys" array to adjust what k
 KEYS REFERENCE: https://www.autohotkey.com/docs/v2/KeyList.htm
 
 {CHANGELOG}
+- v1.2 - Add logging.
 - v1.1 - Allow for multiple key press possibilities. Added array to manage possible key presses.
 */
+logFileName := "aiga-anti-afk.log"
+Try FileDelete logFileName
 ^s::
 {
     global
@@ -30,9 +33,31 @@ KEYS REFERENCE: https://www.autohotkey.com/docs/v2/KeyList.htm
     Loop
         {
             ranSleep := Random(300000, 1500000)
-            ControlSend(keys[Random(1, keys.Length)], , "ahk_id " programids[1])
+            ranSleepMinutes := MillisecondsToMinutes(ranSleep)
+            input := keys[Random(1, keys.Length)]
+            ControlSend(input, , "ahk_id " programids[1])
+            flog "Sent " input " input"
+            flog "Sleeping for roughly " Integer(ranSleepMinutes) " minutes"
             Sleep(ranSleep)
         }
     Return
 }
 #^p::Pause(-1)
+
+; Convert milliseconds to minutes.
+MillisecondsToMinutes(milliseconds)
+{
+    return milliseconds / 60000
+}
+
+; File Logging
+flog(params*)
+{
+    logfile := logFileName
+    ts := FormatTime(, "yyyy-MM-dd HH:mm:ss.") substr(A_TickCount,-3)
+    ; s := A_TickCount
+    ; ts := substr(s,-6,3) "." substr(s,-3)
+    for ,param in params
+      message .= param . " "
+    FileAppend ts " " message "`n", logfile
+}
