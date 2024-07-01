@@ -12,9 +12,12 @@ Use at your own risk. ;)
 
 ## How to use
 
-Download the latest version of this and open the `aakxiv.ahk` file. While it is running, press **F2** to activate it.
+Download the latest version of this and open the `aakxiv.ahk` file.
 
-You can press **F3** to pause it.
+### Default Hotkeys
+
+* **F2** - Activate script
+* **F3** - Pause/Resume script
 
 ## How it works
 
