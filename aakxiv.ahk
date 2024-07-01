@@ -40,8 +40,9 @@ logFileName := "aakxiv.log"
 ; If activated, the script will attempt to detect if you're currently playing. If so, it will not send input.
 ; This is a convenience feature to avoid having to pause/unpause the script manually.
 ; Use "retryInterval" to set how long (in milliseconds) it will wait before attempting to send input again after gameplay is successfully detected.
+; It's best to just set it as the "maxInterval".
 detectGameplay := true
-retryInterval := 300000
+retryInterval := 1500000
 
 ; === END VARIABLES ===
 
