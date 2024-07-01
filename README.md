@@ -1,4 +1,4 @@
-# Anti AFK Kick AHK Script
+# FFXIV Anti AFK Kick AHK Script
 
 ## Description
 
