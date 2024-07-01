@@ -12,9 +12,9 @@ Use at your own risk. ;)
 
 ## How to use
 
-* Download the latest version of AutoHotkey V2
+* Download the latest version of [AutoHotkey V2](https://www.autohotkey.com/)
 * Download the `aakxiv.ahk` file from the latest release
-* Open the `aakxiv.ahk` using AutoHotkey V2
+* Open the `aakxiv.ahk` file using AutoHotkey V2
 
 ### Default Hotkeys
 
