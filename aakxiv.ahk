@@ -22,7 +22,7 @@ KEYS REFERENCE: https://www.autohotkey.com/docs/v2/KeyList.htm
 
 ; === VARIABLES ===
 ; Possible input presses. See https://www.autohotkey.com/docs/v2/KeyList.htm
-keys := ["{Space}", "{1}", "{x}", "{LControl}"]
+keys := ["{Space}", "{1}", "{x}"]
 
 ; Define interval minimum & maximum. In MILLISECONDS.
 ; By default, it is between 5 & 25 minutes.
