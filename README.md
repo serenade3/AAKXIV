@@ -48,7 +48,7 @@ At the top of the file, there will be various variables you can modify. e.g. , `
 * `minInterval` - Minimum interval between inputs (in milliseconds)
 * `maxInterval` - Maximum interval between inputs (in milliseconds)
 * `logFileName` - Name of the log file where information on sent inputs will be saved
-* `detectGameplay` - Set to `true` to enable gameplay detection. This will automatically detect if your currently playing and **will not** send inputs if you're active. Convenience feature to prevent having to pause/unpause manually.
+* `detectGameplay` - Set to `true` to enable gameplay detection. This will automatically detect if you're currently playing and **will not** send inputs if you're active. Convenience feature to prevent having to pause/unpause manually.
 * `retryInterval` - If `detectGameplay` is enabled, determines how long to wait before trying again after gameplay is detected (in milliseconds)
 
 
