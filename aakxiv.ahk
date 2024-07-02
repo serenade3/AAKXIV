@@ -7,13 +7,13 @@ By default, sends a random input at random intervals between 5 and 25 minutes.
 
 {INSTRUCTIONS}
 
-Open this script file using AutoHotkey V2 and then press F2.
+Open this script file using AutoHotkey V2 and then press CTLR+F2.
 
-Use F3 to pause/unpause the script.
+Use CTLR+F3 to pause/unpause the script.
 
 {MODIFYING HOTKEYS}
 
-The lines "F2::"  & "F3::" designates the hotkey to use for activation and pausing.
+The lines "^F2::"  & "^F3::" designates the hotkey to use for activation and pausing.
 You can modify this to your liking. e.g. "^k" for CTLR+K
 
 HOTKEYS REFERENCE: https://www.autohotkey.com/docs/v2/Hotkeys.htm
@@ -57,15 +57,15 @@ if autostart
 }
 else
 {
-    ; Hotkey - Upon pressing "F2", activate script.
-    F2::
+    ; Hotkey - Upon pressing "CTLR+F2", activate script.
+    ^F2::
     {
         AAKXIV
     }
 }
 
-; Hotkey - Upon pressing "F3", pause script.
-F3::
+; Hotkey - Upon pressing "CTLR+F3", pause script.
+^F3::
 {
     if A_IsPaused = 1
     {

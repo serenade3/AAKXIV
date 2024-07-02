@@ -22,8 +22,8 @@ Download the `aakxiv.ahk` file. That's all you need.
 
 ### Default Hotkeys
 
-* **F2** - Activate script (Only used if autostart is disabled)
-* **F3** - Pause/Resume script
+* **CTLR+F2** - Activate script (Only used if autostart is disabled)
+* **CTLR+F3** - Pause/Resume script
 
 ## How it works
 
