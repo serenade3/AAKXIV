@@ -95,7 +95,7 @@ AAKXIV(params*)
             ; If the game window is active, attempt to detect gameplay.
             if WinActive("ahk_id " windowId)
             {
-                FileLog "Game window is active. Trying to detect gameplay for 1 minute"
+                FileLog "Game window is active. Trying to detect gameplay."
                 ; We read any key input here. Mouse movement or clicks aren't sufficient.
                 ih := InputHook("L1", "{LControl}{RControl}{LAlt}{RAlt}{LShift}{RShift}{LWin}{RWin}{AppsKey}{F1}{F2}{F3}{F4}{F5}{F6}{F7}{F8}{F9}{F10}{F11}{F12}{Left}{Right}{Up}{Down}{Home}{End}{PgUp}{PgDn}{Del}{Ins}{BS}{CapsLock}{NumLock}{PrintScreen}{Pause}")
                 ih.KeyOpt("{All}", "+V")
