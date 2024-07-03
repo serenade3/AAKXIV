@@ -17,7 +17,7 @@ Download the `aakxiv.ahk` file. That's all you need.
 ## How to use
 
 * Download the latest version of [AutoHotkey V2](https://www.autohotkey.com/)
-* Download the `aakxiv.ahk` file from the latest release
+* Download the `aakxiv.ahk` file from the [latest release](https://github.com/serenadeg/AAKXIV/releases/latest)
 * Open the `aakxiv.ahk` file using AutoHotkey V2
 
 ### Default Hotkeys
