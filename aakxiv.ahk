@@ -107,7 +107,7 @@ AAKXIV(params*)
                 ih.Stop()
 
                 ; If input is detected, we wait before trying to send input again.
-                if ih.Input != ""
+                if ih.EndReason != "Stopped"
                 {
                     FileLog "Gameplay detected. Script will retry after " GetReadableInterval(retryInterval)
                     Sleep(retryInterval)
