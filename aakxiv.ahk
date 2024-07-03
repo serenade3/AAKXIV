@@ -32,8 +32,8 @@ keys := ["{Space}", "{1}", "{x}"]
 
 ; Define interval minimum & maximum. In milliseconds.
 ; By default, it is between 5 & 25 minutes.
-minInterval := 2000
-maxInterval := 5000
+minInterval := 300000
+maxInterval := 1500000
 
 ; Define log file name.
 ; The log file will be created in the same directory as the script.
