@@ -21,29 +21,31 @@ KEYS REFERENCE: https://www.autohotkey.com/docs/v2/KeyList.htm
 */
 
 ; === VARIABLES ===
+
 ; Autostart.
 ; If set to true, the functionality will activate as soon as this script is opened.
 ; Otherwise, you must use CTLR+F2 to activate the anti-afk functionality.
 autostart := true
 
-; Possible input presses. See https://www.autohotkey.com/docs/v2/KeyList.htm
+; Possible inputs to send to the game window. See https://www.autohotkey.com/docs/v2/KeyList.htm
 keys := ["{Space}", "{1}", "{x}"]
 
 ; Define interval minimum & maximum. In milliseconds.
 ; By default, it is between 5 & 25 minutes.
-minInterval := 300000
-maxInterval := 1500000
+minInterval := 2000
+maxInterval := 5000
 
-; Define log file name and delete existing log if exists.
+; Define log file name.
+; The log file will be created in the same directory as the script.
 logFileName := "aakxiv.log"
 
 ; Activate gameplay detection.
 ; If activated, the script will attempt to detect if you're currently playing. If so, it will not send input.
 ; This is a convenience feature to avoid having to pause/unpause the script manually.
 ; Use "retryInterval" to set how long (in milliseconds) it will wait before attempting to send input again after gameplay is successfully detected.
-; It's best to just set it as the "maxInterval".
+; It's best to just set the retry interval as the "maxInterval".
 detectGameplay := true
-retryInterval := 1500000
+retryInterval := maxInterval
 
 ; === END VARIABLES ===
 
@@ -83,7 +85,7 @@ else
 AAKXIV(params*)
 {
     global
-    ; Obtain program ID.
+    ; Obtain window ID.
     programids := WinGetList("FINAL FANTASY XIV",,,)
     windowId := programids[1]
 
@@ -107,17 +109,7 @@ AAKXIV(params*)
                 ; If input is detected, we wait before trying to send input again.
                 if ih.Input != ""
                 {
-                    if retryInterval < 60000
-                    {
-                        readableInterval := MillisecondsToSeconds(retryInterval)
-                        measure := "seconds"
-                    }
-                    else 
-                    {
-                        readableInterval := MillisecondsToMinutes(retryInterval)
-                        measure := "minutes"
-                    }
-                    FileLog "Gameplay detected. Script will retry after " Integer(readableInterval) " " measure
+                    FileLog "Gameplay detected. Script will retry after " GetReadableInterval(retryInterval)
                     Sleep(retryInterval)
                     Continue
                 }
@@ -137,22 +129,27 @@ AAKXIV(params*)
 
         ; File logging.
         FileLog "Sent " input " input"
-        if randomInterval < 60000
-        {
-            readableInterval := MillisecondsToSeconds(randomInterval)
-            measure := "seconds"
-        }
-        else 
-        {
-            readableInterval := MillisecondsToMinutes(randomInterval)
-            measure := "minutes"
-        }
-        FileLog "Next input will be sent in roughly " Integer(readableInterval) " " measure
-
+        FileLog "Next input will be sent in roughly " GetReadableInterval(randomInterval)
         ; Sleep for the random interval.
         Sleep(randomInterval)
     }
     Return
+}
+
+; Helper Function - Get readable interval from milliseconds.
+GetReadableInterval(milliseconds)
+{
+    if milliseconds < 60000
+    {
+        readableInterval := MillisecondsToSeconds(milliseconds)
+        measure := "seconds"
+    }
+    else 
+    {
+        readableInterval := MillisecondsToMinutes(milliseconds)
+        measure := "minutes"
+    }
+    return Integer(readableInterval) " " measure
 }
 
 ; Helper Function - Convert milliseconds to seconds.
