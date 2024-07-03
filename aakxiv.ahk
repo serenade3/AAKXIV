@@ -13,7 +13,7 @@ Use CTLR+F3 to pause/unpause the script.
 
 {MODIFYING HOTKEYS}
 
-The lines "^F2::"  & "^F3::" designates the hotkey to use for activation and pausing.
+The lines "^F2::"  & "^F3::" designate the hotkeys to use for activation and pausing.
 You can modify this to your liking. e.g. "^k" for CTLR+K
 
 HOTKEYS REFERENCE: https://www.autohotkey.com/docs/v2/Hotkeys.htm
