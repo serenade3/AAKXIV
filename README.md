@@ -4,7 +4,9 @@
 
 A simple AHK script designed to prevent you from getting kicked from FFXIV for being AFK.
 
-Use at your own risk. ;)
+## Warning
+
+Please be advised that [the use of third-party tools is strictly prohibited](https://na.finalfantasyxiv.com/lodestone/topics/detail/36c4d699763603fadd2e61482b0c5d56cb2e4547). This includes tools like AutoHotkey. You have been warnned.
 
 ## Requirements
 
