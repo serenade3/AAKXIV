@@ -47,7 +47,7 @@ At the top of the file, there will be various variables you can modify. e.g. , `
 
 ### List of variables
 
-* `autostart` - Set to `true` to automatically start the script when the `.ahk` file is opened. When set to `false`, the Anti-AFK script must be enabled using **F2**
+* `autostart` - Set to `true` to automatically start the anti-afk when the `.ahk` file is opened. When set to `false`, the Anti-AFK script must be enabled using **CTLR+F2**
 * `keys` - Array showing which key inputs will be sent to the game window
 * `minInterval` - Minimum interval between inputs (in milliseconds)
 * `maxInterval` - Maximum interval between inputs (in milliseconds)
