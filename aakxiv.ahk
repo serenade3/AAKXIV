@@ -23,6 +23,7 @@ KEYS REFERENCE: https://www.autohotkey.com/docs/v2/KeyList.htm
 ; === VARIABLES ===
 ; Autostart.
 ; If set to true, the functionality will activate as soon as this script is opened.
+; Otherwise, you must use CTLR+F2 to activate the anti-afk functionality.
 autostart := true
 
 ; Possible input presses. See https://www.autohotkey.com/docs/v2/KeyList.htm
