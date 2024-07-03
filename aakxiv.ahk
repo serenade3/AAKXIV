@@ -7,7 +7,7 @@ By default, sends a random input at random intervals between 5 and 25 minutes.
 
 {INSTRUCTIONS}
 
-Open this script file using AutoHotkey V2 and then press CTLR+F2.
+Open this script file using AutoHotkey V2. No further action is required afterwards.
 
 Use CTLR+F3 to pause/unpause the script.
 
